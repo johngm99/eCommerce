@@ -13,9 +13,7 @@
 <!-- Custom CSS -->
 <link href="css/shop-homepage.css" rel="stylesheet">
 
-</head>
-<body>
- <script>
+<script>
     function somenteNumeros(num) {
         var er = /[^0-9.]/;
         er.lastIndex = 0;
@@ -24,7 +22,9 @@
           campo.value = "";
         }
     }
- </script>
+</script>
+</head>
+<body>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
@@ -37,7 +37,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
+				<a class="navbar-brand" href="index.html">Brand</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,42 +103,32 @@
 			</div>
 		</div>
 		<div class="row">
+            
+            <!-- Abre login -->
+            
 			<div class="col-lg-5 table-bordered">
 				<h3>Já é cadastrado?</h3>
 				<h5>Então entre com seus dados de login e senha.</h5>
-				<small>E-mail e Senha obrigatórios para o login.</small><BR><BR>
+                <small>E-mail e Senha obrigatórios para o login.</small><BR></BR>
 				<h4>Dados Pessoais</h4>
-				
-				<form class="form-horizontal">
+                
+				<form class="form-horizontal" method="post" action="login.php">
 				  <div class="form-group">
 				    <label for="inputEmail" class="col-sm-2">E-mail:</label>
 				    <div class="col-sm-12">
-				      <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+				      <input type="email" class="form-control" id="inputEmail" placeholder="E-mail" name="email_login">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword" class="col-sm-2">Senha:</label>
 				    <div class="col-sm-12">
-				      <input type="password" class="form-control" id="inputPassword" placeholder="Senha">
+				      <input type="password" class="form-control" id="inputPassword" placeholder="Senha" name="senha_login">
 				    </div>
 				  </div>
 				  <div class="form-group">
-				  	<label class="col-sm-6">Esqueci <a href="#">meu login</a></label>
-				  	<label class="col-sm-6">Esqueci <a href="#">minha senha</a></label>
+				  	<label class="col-sm-6">Esqueci <a href="#" onclick="window.open('reenvio/email.html', 'REENVIO_LOGIN','top=50,left=50,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=475,height=365');">meu login</a></label>
+				  	<label class="col-sm-6">Esqueci <a href="#" onclick="window.open('reenvio/senha.html', 'REENVIO_LOGIN','top=50,left=50,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=475,height=365');">minha senha</a></label>
 				  </div>
-				  
-				  <!--
-				  <div class="form-group">
-				    <div class="col-sm-offset-2 col-sm-10">
-				      
-				      <div class="checkbox">
-				        <label>
-				          <input type="checkbox"> Remember me
-				        </label>
-				      </div>
-				    </div>
-				  </div>
-				  --> 
 				  <div class="form-group">
 				    <div class=" col-sm-10">
 				      <button type="submit" class="btn btn-default">Entre</button>
@@ -146,70 +136,46 @@
 				  </div>
 				</form>
 			</div>
+            
+            <!-- Fecha login -->
+            
+            <!-- Abre cadastrar-->
 			
 			<div class="col-sm-offset-1 col-lg-5 table-bordered">
 				<h3>Ainda não é cadastrado no site?</h3>
 				<h5>Faça agora mesmo o seu cadastro, é simples e rápido!</h5>
-				<small>Todos os campos são de preenchimento obrigatório.</small><BR><BR>
+                <small>Todos os campos são de preenchimento obrigatório.</small><BR></BR>
 				<h4>Dados Cadastrais</h4>
 				
-				<form class="form-horizontal">
+				<form class="form-horizontal" method="post" action="login.php">
 				  <div class="form-group">
 				    <label for="inputEmail2" class="col-sm-2">E-mail:</label>
 				    <div class="col-sm-12">
-				      <input type="email" class="form-control" id="inputEmail2" placeholder="E-mail">
+				      <input type="email" class="form-control" id="inputEmail2" placeholder="E-mail" name="email_cadastrar">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword2" class="col-sm-6">Senha:</label>
 				     <label for="inputRePassword" class="col-sm-6">Confirmar Senha:</label>
 				    <div class="col-sm-6">
-				      <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
+				      <input type="password" class="form-control" id="inputPassword2" placeholder="Senha" name="senha_cadastrar">
 				    </div>
 				    <div class="col-sm-6">
-				      <input type="password" class="form-control" id="inputRePassword" placeholder="Confirmar Senha">
+				      <input type="password" class="form-control" id="inputRePassword" placeholder="Confirmar Senha" name="senha_confirmar">
 				    </div>				    
 				  </div>
-				  <!-- 
-					<div class="form-group">
-					    <label for="inputCPF/CNPJ" class="col-sm-12">CPF ou CNPJ (Apenas Números):</label>
-							<div class="col-sm-12">
-						    	<input type="number" class="form-control" id="inputCPF/CNPJ" placeholder="CPF ou CNPJ">
-						    </div>
-				   	</div>
-				   	<div class="form-group">
-				   		<label for="inputCEP" class="col-sm-12">CEP:</label>
-				   		<div class="col-sm-5">
-				   			<input class="form-control input-sm" onkeyup="somenteNumeros(this);" id="inputCEP" maxlength="5" type="text"  ng-model="numero.valor" >
-				   		</div>
-			
-				   		<div class="col-sm-3">
-				   			<input class="form-control input-sm" onkeyup="somenteNumeros(this);" id="inputCEP" maxlength="3" type="text"   >
-				   		</div>
-				   	</div>
-				   -->
-				  <!--
-				  <div class="form-group">
-				    <div class="col-sm-offset-2 col-sm-10">
-				      
-				      <div class="checkbox">
-				        <label>
-				          <input type="checkbox"> Remember me
-				        </label>
-				      </div>
-				       
-				    </div>
-				  </div>
-				  -->
 				  <div class="form-group">
 				    <div class="col-sm-10">
 				      <button type="submit" class="btn btn-default">Cadastrar</button>
 				    </div>
 				  </div>
-				  <BR><BR>
+                    <BR></BR>
 				</form>
 				
 			</div>
+            
+            <!-- Fecha cadastrar -->
+            
 		</div>
 	</div>
 
