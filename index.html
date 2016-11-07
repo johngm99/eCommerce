@@ -5,13 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Bootstrap 101 Template</title>
+<title>eCommerce</title>
 
 <!-- Bootstrap -->
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="css/shop-homepage.css" rel="stylesheet">
+
+<!-- My Custom -->
+<link href="css/ecommerce.css" rel="stylesheet">
 
 </head>
 <body>
@@ -27,7 +31,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">Brand</a>
+				<a class="navbar-brand" href="index.html">eCommerce</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,25 +66,14 @@
 					<li><a href="#">Políticas do Site</a></li>
 					<li><a href="#">Atendimento</a></li>
 					<li><a href="#">SAC</a></li>
-					
-					<!--  
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul></li>
-						-->
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>
 		<!-- /.container-fluid -->
 	</nav>	
+	<!-- Ending Nav -->
+	
 	
     <!-- Page Content -->
     <div class="container">
@@ -90,11 +83,12 @@
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
+                    <a href="#" onclick="informatica()" class="list-group-item">Informatica</a>
+                    <a href="#" onclick="hardware()" class="list-group-item">Hardware</a>
                     <a href="#" class="list-group-item">Category 3</a>
                 </div>
             </div>
+            
 
             <div class="col-md-9">
 
@@ -129,15 +123,14 @@
 
                 </div>
 
-                <div class="row">
+                <div class="row" id="vitrine">
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="#">First Product</a>
-                                </h4>
+                                <h4><a href="#">First Product</a></h4>
                                 <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                             </div>
                             <div class="ratings">
@@ -273,7 +266,8 @@
     </div>
     <!-- /.container -->
 	
-
+	<!-- One Page -->
+	<script src="js/page_changer.js"></script>
 	
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
